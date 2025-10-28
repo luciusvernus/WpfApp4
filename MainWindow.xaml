@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfApp4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Konwerter temperatury" Height="220" Width="360">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Podaj temperaturę:" Margin="0,0,0,6"/>
+        <TextBox Grid.Row="1" Name="InputTextBox" Width="200" HorizontalAlignment="Left" Margin="0,0,0,8"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,8" VerticalAlignment="Center" >
+            <RadioButton Name="RbToFahrenheit" Content="Na Fahrenheity (°F)" IsChecked="True" Margin="0,0,12,0"/>
+            <RadioButton Name="RbToCelsius" Content="Na Celsjusze (°C)"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button Name="ConvertButton" Content="Konwertuj" Width="100" Click="ConvertButton_Click" IsDefault="True"/>
+            <Button Name="ClearButton" Content="Wyczyść" Width="80" Margin="8,0,0,0" Click="ClearButton_Click"/>
+            <TextBlock Name="ResultTextBlock" Margin="16,4,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>
